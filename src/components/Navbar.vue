@@ -1,10 +1,15 @@
 <template>
+  <div class="container-fluid">
+    <div class="row">
+      <img class="main-img" src="https://m.media-amazon.com/images/M/MV5BNjRmNDI5MjMtMmFhZi00YzcwLWI4ZGItMGI2MjI0N2Q3YmIwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" alt="">
+    </div>
+  </div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex flex-column align-items-center">
         <img
           alt="logo"
-          src="../assets/img/cw-logo.png"
+          src="../assets/img/imdb-logo-transparent.png"
           height="45"
         />
       </div>
@@ -35,7 +40,7 @@
       </ul>
       <span class="navbar-text">
         <button
-          class="btn btn-outline-primary text-uppercase"
+          class="btn btn-outline-light text-uppercase"
           @click="login"
           v-if="!user.isAuthenticated"
         >
@@ -102,6 +107,10 @@ export default {
 </script>
 
 <style scoped>
+
+.main-img{
+height: 300px;
+}
 .dropdown-menu {
   user-select: none;
   display: block;
@@ -121,6 +130,6 @@ a:hover {
   text-transform: uppercase;
 }
 .nav-item .nav-link.router-link-exact-active{
-  color: var(--primary);
+  color:rgb(233, 201, 63);
 }
 </style>
