@@ -6,8 +6,16 @@
     <router-view />
   </main>
   <footer>
-    <div class="bg-dark text-light text-center p-4">
-      Made with 💖 by CodeWorks
+    <div class="bg-dark text-light text-center pt-1 pb-1">
+      <p>
+        <small>
+          Visit the REAL
+          <a href="https://www.imdb.com/">
+            imdb.com
+          </a>
+          to compare.
+        </small>
+      </p>
     </div>
   </footer>
 </template>

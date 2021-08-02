@@ -1,13 +1,11 @@
 <template>
   <div class="container-fluid p-0">
-    <div class="sticky">
-      <div class="row nm-row">
-        <div class="overlayL"></div>
-        <div class="overlayR"></div>
-        <div class="sidebar">
-          <!-- <ComingSoon v-for="m in comingSoon" :key="m.id" :coming-soon-prop="m" /> -->
-          <img v-for="m in comingSoon" :key="m.id" class="main-img" :src="m.image" alt="">
-        </div>
+    <div class="row nm-row">
+      <div class="overlayL"></div>
+      <div class="overlayR"></div>
+      <div class="sidebar">
+        <!-- <ComingSoon v-for="m in comingSoon" :key="m.id" :coming-soon-prop="m" /> -->
+        <img v-for="m in comingSoon" :key="m.id" class="main-img " :src="m.image" alt="">
       </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -125,15 +123,15 @@ export default {
 </script>
 
 <style scoped>
+.nm-row{
+  overflow-x: scroll;
+  white-space: nowrap;
+  max-height: 145px;
+}
 .sidebar{
   padding-left: 70px;
   background-color: rgba(0, 0, 0, 0.971);
   padding-right: 70px;
-}
-.nm-row{
-  overflow-x: scroll;
-  white-space: nowrap;
-  height: 175px;
 }
 .overlayL{
   position: absolute;
@@ -150,7 +148,7 @@ export default {
   right: 0;
 }
 .main-img{
-height: cover;
+height: 145px;
 display: inline-block;
 }
 .dropdown-menu {
