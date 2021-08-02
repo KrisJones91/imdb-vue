@@ -7,7 +7,7 @@
         </h2>
       </div>
       <div class="row image-row">
-        <div>
+        <div class="ml-5 mx-5 ">
           <img class="main-image" v-for="box in state.boxOffice" :src="box.image" :key="box.id">
         </div>
         <!-- <BoxOffice v-for="box in state.boxOffice" :key="box.id" :box-prop="box" /> -->
@@ -49,11 +49,18 @@ export default {
 .image-row{
   overflow-x: scroll;
   white-space: nowrap;
-  max-height: 500px;
+  max-height: 100%;
+  border: transparent;
+  margin: 0% 3% 0% 3%;
 }
 .main-image{
-  height: 300px;
-  max-width: 200px;
+  max-height: 350px;
   display: inline-block;
+
 }
+.main-image:hover{
+  transform: scale(1.03);
+
+}
+
 </style>

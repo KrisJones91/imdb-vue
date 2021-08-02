@@ -30,8 +30,8 @@ export default {
 
 <style>
 .box-image{
-  height: 300px;
-  max-width: 200px;
+  height: 150px;
+  max-width: 150px;
   display: inline-block;
 }
 
