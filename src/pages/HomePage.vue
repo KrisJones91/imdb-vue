@@ -1,5 +1,8 @@
 <template>
   <div class="home container-fluid">
+    <div class="row">
+      <BoxOffice v-for="box in state.boxOffice" :key="box.id" :box-prop="box" />
+    </div>
   </div>
 </template>
 
@@ -15,11 +18,12 @@ export default {
   setup() {
     const state = reactive({
       movies: computed(() => AppState.movies),
-      activeMovie: computed(() => AppState.activeMovie)
+      activeMovie: computed(() => AppState.activeMovie),
+      boxOffice: computed(() => AppState.boxOffice)
     })
     onMounted(async() => {
       try {
-        await moviesService.getSearch()
+        await moviesService.getBoxOffice()
       } catch (error) {
         logger.log(error)
       }

@@ -5,7 +5,7 @@
       <div class="overlayR"></div>
       <div class="sidebar">
         <!-- <ComingSoon v-for="m in comingSoon" :key="m.id" :coming-soon-prop="m" /> -->
-        <img v-for="m in comingSoon" :key="m.id" class="main-img " :src="m.image" alt="">
+        <img class="main-img" v-for="m in comingSoon" :key="m.id" :src="m.image" alt="">
       </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -136,14 +136,14 @@ export default {
 .overlayL{
   position: absolute;
   width: 7vw;
-  height: 30%;
+  max-height: 30%;
   background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.368), rgb(0, 0, 0));
   left: 0;
 }
 .overlayR{
   position: absolute;
   width: 7vw;
-  height: 30%;
+  max-height: 30%;
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.368), rgb(0, 0, 0));
   right: 0;
 }
