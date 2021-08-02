@@ -1,11 +1,6 @@
 <template>
-  <div class="box-office">
-    <div class="col">
-      <p class="m-0">
-        {{ boxProp.rank }}
-      </p>
-      <img class="box-image" :src="boxProp.image" alt="">
-    </div>
+  <div class="box-office box-image">
+    <img class="box-image" :src="boxProp.image" alt="">
   </div>
 </template>
 
@@ -35,6 +30,9 @@ export default {
 
 <style>
 .box-image{
-  max-height: 200px;
+  height: 300px;
+  max-width: 200px;
+  display: inline-block;
 }
+
 </style>
