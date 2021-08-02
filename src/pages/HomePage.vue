@@ -1,6 +1,11 @@
 <template>
   <div class="home container-fluid">
     <div class="row">
+      <div class="col-6">
+        <h4>Box Office</h4>
+      </div>
+    </div>
+    <div class="row">
       <BoxOffice v-for="box in state.boxOffice" :key="box.id" :box-prop="box" />
     </div>
   </div>

@@ -1,7 +1,10 @@
 <template>
   <div class="box-office">
     <div class="col">
-      <p>{{ boxProp.title }}</p>
+      <div class="">
+        <img class="box-image" :src="boxProp.image" alt="">
+        <p>{{ boxProp.title }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -31,5 +34,8 @@ export default {
 </script>
 
 <style>
-
+.box-image{
+  /* max-height: 50%; */
+  max-width: 200px;
+}
 </style>
