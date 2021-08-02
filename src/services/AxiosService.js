@@ -8,3 +8,7 @@ export const topApi = Axios.create({
   baseURL: 'https://imdb-api.com/en/API/ComingSoon/k_0b5m7t4j',
   timeout: 8000
 })
+export const boxApi = Axios.create({
+  baseURL: 'https://imdb-api.com/en/API/BoxOffice/k_0b5m7t4j',
+  timeout: 8000
+})

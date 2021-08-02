@@ -1,6 +1,6 @@
 import { AppState } from '../AppState'
 import { logger } from '../utils/Logger'
-import { api, topApi } from './AxiosService'
+import { api, boxApi, topApi } from './AxiosService'
 
 class MoviesService {
   async getSearch(name) {
@@ -17,6 +17,16 @@ class MoviesService {
     try {
       const res = await topApi.get()
       AppState.comingSoon = res.data.items
+      logger.log(res.data.items)
+    } catch (error) {
+      logger.log(error)
+    }
+  }
+
+  async getBoxOffice() {
+    try {
+      const res = await boxApi.get()
+      AppState.boxOffice = res.data.items
       logger.log(res.data.items)
     } catch (error) {
       logger.log(error)
