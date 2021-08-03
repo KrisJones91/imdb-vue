@@ -10,7 +10,7 @@ import { computed, onMounted } from '@vue/runtime-core'
 import { AppState } from '../AppState'
 
 export default {
-  name: 'BoxOffice',
+  name: 'BoxOfficeComponent',
   props: {
     boxProp: { type: Object, required: true }
   },

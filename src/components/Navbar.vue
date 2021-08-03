@@ -40,6 +40,11 @@
               About
             </router-link>
           </li>
+          <li class="nav-item">
+            <router-link :to="{ name: 'BoxOffice' }" class="nav-link">
+              Box Office
+            </router-link>
+          </li>
         </ul>
         <span class="navbar-text">
           <button
@@ -125,18 +130,19 @@ export default {
 .nm-row{
   overflow-x: scroll;
   white-space: nowrap;
-  max-height: 210px;
+  max-height: 205px;
   background-color: rgba(0, 0, 0, 0.971);
 }
 .main-img{
-  height: 205px;
+  height: 180px;
 display: inline-block;
 max-width: 100%;
 border-radius: 20px;
 border: transparent;
+margin: 5px;
 }
 .main-img:hover{
-box-shadow: rgba(255, 202, 57, 0.63) 1px 0px 10px;
+/* box-shadow: rgba(255, 202, 57, 0.63) 1px 0px 10px; */
 animation: shake 2s;
 animation-iteration-count: infinite;
 }
