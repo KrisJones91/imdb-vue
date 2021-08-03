@@ -1,14 +1,13 @@
 <template>
   <div class="container-fluid p-0">
-    <div class="row nm-row">
-      <div class="overlayL"></div>
-      <div class="overlayR"></div>
-      <div class="sidebar">
-        <!-- <ComingSoon v-for="m in comingSoon" :key="m.id" :coming-soon-prop="m" /> -->
-        <img class="main-img" v-for="m in comingSoon" :key="m.id" :src="m.image" alt="">
+    <div class="row nm-row m-0 pb-2">
+      <div class="">
+        <img class="main-img p-1" v-for="m in comingSoon" :key="m.id" :src="m.image" alt="">
       </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  </div>
+  <div class="container-fluid bg-dark">
+    <nav class="navbar p-0 navbar-expand-lg navbar-dark bg-dark">
       <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
         <div class="d-flex flex-column align-items-center">
           <img
@@ -126,30 +125,37 @@ export default {
 .nm-row{
   overflow-x: scroll;
   white-space: nowrap;
-  max-height: 145px;
-}
-.sidebar{
-  padding-left: 70px;
+  max-height: 210px;
   background-color: rgba(0, 0, 0, 0.971);
-  padding-right: 70px;
-}
-.overlayL{
-  position: absolute;
-  width: 7vw;
-  max-height: 30%;
-  background-image: linear-gradient(-90deg, rgba(0, 0, 0, 0.368), rgb(0, 0, 0));
-  left: 0;
-}
-.overlayR{
-  position: absolute;
-  width: 7vw;
-  max-height: 30%;
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.368), rgb(0, 0, 0));
-  right: 0;
 }
 .main-img{
-height: 145px;
+  height: 205px;
 display: inline-block;
+max-width: 100%;
+border-radius: 20px;
+border: transparent;
+}
+.main-img:hover{
+box-shadow: rgba(255, 202, 57, 0.63) 1px 0px 10px;
+animation: shake 2s;
+animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, -1px) rotate(0deg); }
+  10% { transform: translate(-1px, -1px) rotate(-1deg); }
+  20% { transform: translate(-1px, 0px) rotate(.75deg); }
+  30% { transform: translate(1px, 1px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(.75deg); }
+  50% { transform: translate(-1px, 1px) rotate(-.75deg); }
+  60% { transform: translate(-1px, 1px) rotate(0deg); }
+  70% { transform: translate(1px, 1px) rotate(-.5deg); }
+  80% { transform: translate(-1px, -1px) rotate(.5deg); }
+  90% { transform: translate(1px, 1px) rotate(.75deg); }
+  100% { transform: translate(1px, -1px) rotate(0deg); }
+  }
+
+.pa{
+padding-left: 1px;
 }
 .dropdown-menu {
   user-select: none;
