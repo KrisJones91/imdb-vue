@@ -8,7 +8,7 @@
       </div>
       <div class="row image-row">
         <div class="ml-0 mx-0 m-1">
-          <img class="main-image ml-2 mr-0" v-for="box in state.boxOffice" :src="box.image" :key="box.id">
+          <img class="main-image ml-2 mr-0 card" v-for="box in state.boxOffice" :src="box.image" :key="box.id">
         </div>
         <!-- <BoxOffice v-for="box in state.boxOffice" :key="box.id" :box-prop="box" /> -->
       </div>
@@ -58,10 +58,11 @@ export default {
 }
 .main-image{
   max-height: 350px;
-  min-width: 240px;
+  // max-width: 280px;
   display: inline-block;
   border-radius: 15px;
   transition: .3s;
+  border: 1px solid silver;
 }
 .main-image:hover{
   transform: scale(1.015);
